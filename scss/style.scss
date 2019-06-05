@@ -11,10 +11,19 @@ body {
 	margin: 0 auto;
 }
 header{
+	background-color: black;
+	color: white;
+	padding: 2%;
+}
+.h-content{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	background-color: #d8e1ff;
+	
+}
+.name{
+	width: 100%;
+	text-align: center;
 }
 
 #frontend{
@@ -52,4 +61,14 @@ header{
 	background-color: red;
 	height: 200px;
 	
+}
+@media (max-width: 800px) {
+  .grid-container {
+		grid-template-columns: repeat(4, 100%);
+    grid-template-areas:
+      'card1'
+      'card2'
+			'card3'
+			'card4';
+  }
 }
