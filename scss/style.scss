@@ -1,74 +1,223 @@
 html {
+  background-color: #eeeeee;
+  color: #333333;
   font-size: 62.5%;
 }
 
+a {
+  text-decoration: none;
+}
+
+i {
+  color: #eeeeee;
+  margin-bottom: 30px;
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
+
 }
-.container{
-	max-width: 95%;
-	margin: 0 auto;
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
 }
-header{
-	background-color: black;
-	color: white;
-	padding: 2%;
+
+header {
+  background-color: #333333;
+  color: #eeeeee;
+  padding: 2%;
 }
-.h-content{
+
+.h-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.btn-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+.btn {
+  margin-bottom: 30px;
+
+  a {
+    font-size: 20px;
+    color: #eeeeee;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 8px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #eeeeee;
+    }
+
+    &:before {
+      opacity: 0;
+      transform: translateY(- $distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+
+    &:hover,
+    &:focus {
+
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
+}
+
+.name {
+  h1 {
+    font-size: 3rem;
+  }
+
+  width: 100%;
+  text-align: center;
+}
+
+#frontend {
+  /* max-width: 95%;
+  margin: 0 auto; */
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-areas:
+    'front1 front2';
+}
+
+.front1 {
+  grid-area: front1;
+}
+
+.front2 {
+  grid-area: front2;
+}
+
+#backend {
+  max-width: 95%;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+/* CARTE SITES */
+.card-img {
+  transition: all 0.3s ease;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	
-}
-.name{
-	width: 100%;
-	text-align: center;
+	flex-direction: column;
+	align-items: center;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+	}
+	a{
+		color: #333333;
+		&:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #333333;
+    }
+	}
 }
 
-#frontend{
-	max-width: 95%;
-	margin: 0 auto;
+.card-overlay {
+  width: 100%;
+  background: rgba(238,238,238, 0.8);
+  position: absolute;
+  padding: 3%;
+  top: 0;
+  bottom: 0;
+	transition: all 0.3s ease-in-out;
+	border: 2px solid #333333;
+  color: #333333;
+  z-index: 3;
+  opacity: 0;
 }
-.grid-container {
-	display: grid;
-	grid-template-columns: repeat(4, 50%);
-	grid-gap: 1rem;
-	grid-template-areas:
-		"card1 card2"
-    "card3 card4";
-}
-.card1{
-	grid-area: card1;
-	background-color: blue;
-	height: 200px;
 
+.card:hover>.card-overlay {
+  opacity: 1;
 }
-.card2{
-	grid-area: card2;
-	background-color: red;
-	height: 200px;
-	
-}
-.card3{
-	grid-area: card3;
-	background-color: blue;
-	height: 200px;
 
-}
-.card4{
-	grid-area: card4;
-	background-color: red;
-	height: 200px;
-	
-}
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .grid-container {
-		grid-template-columns: repeat(4, 100%);
+    grid-template-columns: repeat(4, 100%);
+    grid-gap: 5%;
     grid-template-areas:
-      'card1'
-      'card2'
-			'card3'
-			'card4';
+      'front1'
+      'front2';
+  }
+
+  .front1 {
+    grid-area: front1;
+  }
+
+  .front2 {
+    grid-area: front2;
   }
 }

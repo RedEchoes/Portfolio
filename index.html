@@ -15,34 +15,90 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/8d15549989.js"></script>
   <link rel="stylesheet" href="css/style.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-    <header>
-      <div class="container">
-        <div class="h-content">
-            <div class="joindre">
-                <h2>Me joindre</h2>
-              </div>
-      <div class="name">
-        <h1>Vincent Desrosiers</h1>
-      </div>
-      
-    </div>
-    </div>
-    </header>
+  <header>
+    <div class="container">
+      <div class="h-content">
+        <div class="joindre">
+          <h2>Me joindre</h2>
+        </div>
+        <div class="name">
+          <h1>Vincent Desrosiers</h1>
+          <h2>Développeur Web</h2>
+          <a href="https://github.com/RedEchoes"><i class="fab fa-github fa-3x"></i></a>
+          <div class="btn-header">
+            <div class="btn btn-frontend">
+              <a href="#frontend">Réalisations front-end</a>
+            </div>
+            <div class="btn btn-backend">
+              <a href="#backend">Réalisations back-end</a>
+            </div>
+          </div>
+        </div>
 
-  <div id="frontend">
+      </div>
+    </div>
+  </header>
+
+  <div id="frontend" class="container">
+    <h2>Réalisations front-end</h2>
     <div class="grid-container">
-      <div class="card1"></div>
-      <div class="card2"></div>
-      <div class="card3"></div>
-      <div class="card4"></div>
+      <div class="card front1">
+        <div class="card-img">
+          <img src="img/grid.PNG" alt="">
+        </div>
+        <div class="card-overlay">
+          <div class="card-content">
+            <div class="card-title">
+              <h3>Léane Fleury Design</h3>
+            </div>
+            <div class="card-descript">
+              <p>Site de type one-pager avec Grid et Sass.</p>
+            </div>
+            <i class="fab fa-sass fa-2x"></i>
+            <div class="btn">
+              <a href="http://grid.vdesrosiers.devwebgarneau.com/">Visiter</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="card front2">
+        <div class="card-img">
+          <img src="img/voyage.PNG" alt="">
+        </div>
+        <div class="card-overlay">
+          <div class="card-content">
+            <div class="card-title">
+              <h3>Raymond Voyage</h3>
+            </div>
+            <div class="card-descript">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie porta nibh
+                ac iaculis. Fusce egestas, urna id pharetra suscipit, orci odio pellentesque lectus, et vulputate nibh
+                urna
+                et est.</p>
+            </div>
+            <i class="fab fa-wordpress-simple fa-2x"></i>
+            <div class="btn">
+              <a href="http://raymondvoyage.vdesrosiers.devwebgarneau.com/">Visiter</a></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  </div>
 
+  <div id="backend">
+    <h2>Réalisations backend-end</h2>
+    <div class="grid-container">
+      <div class="card back1"></div>
+      <div class="card back2"></div>
+      <div class="card back3"></div>
+      <div class="card back4"></div>
+    </div>
+  </div>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
