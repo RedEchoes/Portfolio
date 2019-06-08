@@ -1,0 +1,27 @@
+*{
+	box-sizing: border-box;
+}
+html {
+  background-color: #eeeeee;
+  color: #333333;
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+}
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+i {
+  color: #eeeeee;
+  margin-bottom: 30px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 85%;
+  margin: 0 auto; 
+}

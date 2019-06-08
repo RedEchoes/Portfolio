@@ -1,27 +1,7 @@
-*{
-	box-sizing: border-box;
-}
-html {
-  background-color: #eeeeee;
-  color: #333333;
-  font-size: 62.5%;
-}
-* a {
-  text-decoration: none;
-  color: inherit;
-}
-i {
-  color: #eeeeee;
-  margin-bottom: 30px;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
-}
-.container {
-  max-width: 85%;
-  margin: 0 auto;
-}
+@import "general";
+@import "colors";
+
+
 header {
   background-color: #333333;
   color: #eeeeee;
@@ -108,7 +88,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     text-align: center;
   }
 }
-.grid-container {
+.grid-front {
   display: grid;
   grid-gap: 5%;
   grid-template-areas:
@@ -121,15 +101,23 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   grid-area: front2;
 }
 #backend {
-  max-width: 95%;
-  margin: 0 auto;
   h2 {
     text-align: center;
   }
 }
-img {
-  width: 100%;
+.grid-back {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-areas:
+    'back1 back2'; 
 }
+.back1 {
+  grid-area: back1;
+}
+.back2 {
+  grid-area: back2;
+}
+
 /* CARTE SITES */
 .card-img {
   transition: all 0.3s ease;
@@ -239,7 +227,7 @@ img {
   }
 }
 @media (max-width: 900px) {
-  .grid-container {
+  .grid-front {
     grid-template-columns: repeat(4, 100%);
     grid-gap: 5%;
     grid-template-areas:
