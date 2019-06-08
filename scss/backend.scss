@@ -1,0 +1,19 @@
+#backend {
+  h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 300;
+  }
+}
+.grid-back {
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-areas:
+    'back1 back2'; 
+}
+.back1 {
+  grid-area: back1;
+}
+.back2 {
+  grid-area: back2;
+} 

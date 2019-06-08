@@ -1,0 +1,91 @@
+@import "colors"; 
+
+.card-img {
+  transition: all 0.3s ease;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.card-content {
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  h3 {
+		text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  $duration: .3s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  .btn {
+    margin-bottom: 30px;
+    a {
+      font-size: 20px;
+      color: $cLight;
+      position: relative;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 8px;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $cLight; 
+      }
+      &:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+      }
+      &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:hover,
+      &:focus {
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+      }
+    }
+  }
+}
+.card-overlay {
+  width: 100%;
+  background: rgba(26, 25, 25, 0.8);
+  position: absolute;
+  padding: 2%;
+  top: 0;
+  bottom: 0;
+	transition: all 0.3s ease-in-out;
+	border: 2px solid #333333;
+  color: #eeeeee;
+  z-index: 3;
+	opacity: 0;
+	
+} 
+.card:hover>.card-overlay {
+  opacity: 1;
+}

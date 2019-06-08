@@ -1,21 +1,21 @@
+@import "colors";
 *{
 	box-sizing: border-box;
 }
 html {
-  background-color: #eeeeee;
-  color: #333333;
+  background-color: $cLight;  
+  color: $cDark; 
   font-size: 62.5%;
 }
 img {
-  width: 100%;
+  width: 100%; 
 }
 * a {
   text-decoration: none;
-  color: inherit;
+  color: inherit; 
 }
-i {
-  color: #eeeeee;
-  margin-bottom: 3px;
+i { 
+  margin-bottom: 10px;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -23,5 +23,5 @@ body {
 }
 .container {
   max-width: 85%;
-  margin: 0 auto; 
+  margin: 0 auto;   
 }

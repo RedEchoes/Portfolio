@@ -1,0 +1,12 @@
+$cLight: #eeeeee; 
+$cDark: #333333; 
+
+@media (prefers-color-scheme: light) {
+  $cLight: #eeeeee; 
+  $cDark: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  $cLight: #333333; 
+  $cDark: #eeeeee;
+}  
