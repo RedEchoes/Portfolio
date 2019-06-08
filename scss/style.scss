@@ -90,15 +90,23 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 .grid-front {
   display: grid;
-  grid-gap: 5%;
+  
+  grid-gap: 5rem;
   grid-template-areas:
-    'front1 front2';
+    'front1 front2'
+    'front3 front4';
 }
 .front1 {
   grid-area: front1;
 }
 .front2 {
   grid-area: front2;
+}
+.front3 {
+  grid-area: front3;
+}
+.front4 {
+  grid-area: front4;
 }
 #backend {
   h2 {
@@ -107,7 +115,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 .grid-back {
   display: grid;
-  grid-gap: 5%;
+  grid-gap: 5rem;
   grid-template-areas:
     'back1 back2'; 
 }
@@ -198,7 +206,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   .formSubmit {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px; 
   }
   label {
     font-size: 2.4rem;
@@ -219,25 +227,28 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     display: inline-block;
     padding: 7px 17px;
     font-size: 2.4rem;
-    /* color: $cWhite; */
-    /* background-color: $cBlue;
+    color: #eeeeee;
+    background-color: #333333;
     &:hover {
-      background-color: $cPink;
-    } */
+      background-color: #333333;
+    }
   }
 }
 @media (max-width: 900px) {
   .grid-front {
     grid-template-columns: repeat(4, 100%);
-    grid-gap: 5%;
+    grid-gap: 2rem;
     grid-template-areas:
       'front1'
-      'front2';
+      'front2'
+      'front3'
+      'front4';
   }
-  .front1 {
-    grid-area: front1;
-  }
-  .front2 {
-    grid-area: front2;
+  .grid-back {
+    grid-template-columns: repeat(4, 100%);
+    grid-gap: 2rem;
+    grid-template-areas:
+      'back1'
+      'back2';
   }
 }
