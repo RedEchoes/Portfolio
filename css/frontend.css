@@ -1,2 +1,0 @@
-#frontend h2{text-align:center;font-size:3.8rem;font-weight:300}.grid-front{display:-ms-grid;display:grid;padding-bottom:30px;grid-gap:5rem;grid-template-areas:'front1 front2' 'front3 front4'}.front1{-ms-grid-row:1;-ms-grid-column:1;grid-area:front1}.front2{-ms-grid-row:1;-ms-grid-column:2;grid-area:front2}.front3{-ms-grid-row:2;-ms-grid-column:1;grid-area:front3}.front4{-ms-grid-row:2;-ms-grid-column:2;grid-area:front4}
-/*# sourceMappingURL=frontend.css.map */

@@ -1,10 +1,42 @@
 @import "colors";
-@import "general";
 @import "header";
 @import "frontend";
 @import "backend";
 @import "card";
 @import "form";
+
+*{
+	box-sizing: border-box;
+}
+html {
+  background-color: #eeeeee;  
+  color: $cDark; 
+  font-size: 62.5%;
+}
+img {
+  width: 100%; 
+}
+* a {
+  text-decoration: none;
+  color: inherit; 
+}
+i { 
+  margin-bottom: 10px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  $cLight: #333333; 
+  $cDark: #eeeeee;
+}  
 
 @media (max-width: 900px) {
   .grid-front {
@@ -16,11 +48,29 @@
       'front3'
       'front4';
   }
-  .grid-back {
+  .front1 { 
+    grid-area: front1;
+  }
+  .front2 {
+    grid-area: front2;
+  }
+  .front3 {
+    grid-area: front3;
+  }
+  .front4 {
+    grid-area: front4;
+  } 
+  .grid-back { 
     grid-template-columns: repeat(4, 100%);
     grid-gap: 2rem;
     grid-template-areas:
       'back1'
       'back2';  
   }
+  .back1 {
+    grid-area: back1;
+  }
+  .back2 {
+    grid-area: back2;
+  } 
 }
