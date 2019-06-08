@@ -18,7 +18,7 @@ header {
 	justify-content: space-between;
 	width: 150px;
 
-} */
+} */ 
 .front-descript{
 	padding: 0 20% 2%;
 }
@@ -86,11 +86,13 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 #frontend {
   h2 {
     text-align: center;
+    font-size: 3.8rem;
+    font-weight: 300;
   }
 }
 .grid-front {
   display: grid;
-  
+  padding-bottom: 30px;
   grid-gap: 5rem;
   grid-template-areas:
     'front1 front2'
@@ -111,6 +113,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 #backend {
   h2 {
     text-align: center;
+    font-size: 3.8rem;
+    font-weight: 300;
   }
 }
 .grid-back {
@@ -148,6 +152,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   }
   p {
     font-size: 1.5rem;
+    text-align: center;
 	}
 }
 .card-overlay {
