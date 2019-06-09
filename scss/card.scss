@@ -25,8 +25,8 @@
     text-align: center;
   }
   $duration: .3s;
-$distance: 8px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  $distance: 8px;
+  $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   .btn {
     margin-bottom: 30px;
     a {
@@ -81,11 +81,9 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   top: 0;
   bottom: 0;
 	transition: all 0.3s ease-in-out;
-	border: 2px solid #333333;
   color: #eeeeee;
   z-index: 3;
 	opacity: 0;
-	
 } 
 .card:hover>.card-overlay {
   opacity: 1;

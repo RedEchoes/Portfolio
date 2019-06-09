@@ -18,8 +18,15 @@ header {
   margin: 0 auto;
 
 } 
-.front-descript{
-	padding: 0 20% 2%; 
+.intro {
+  h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 300;
+  }
+  p{
+    padding: 0 20% 2%; 
+  }
 }
 .btn-header {
   display: flex;

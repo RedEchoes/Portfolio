@@ -37,7 +37,13 @@ body {
   $cLight: #333333; 
   $cDark: #eeeeee;
 }  
-
+@media screen and(max-width: 1100px){
+  .card-overlay, .card-overlay:hover, .card-overlay:focus, .card-overlay:active {
+    position: initial;
+    opacity: 1;
+    
+  }
+}
 @media (max-width: 900px) {
   .grid-front {
     grid-template-columns: repeat(4, 100%);
@@ -72,5 +78,6 @@ body {
   }
   .back2 {
     grid-area: back2;
-  } 
+  }
+  
 }
