@@ -1,8 +1,6 @@
 @import "colors";
 
 header {
-  background-color: $cLight;
-  color: $cDark;
   padding: 2%;
 }
 
@@ -20,8 +18,25 @@ header {
   margin: 0 auto;
 
 }
-
+.about{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .intro {
+  width: 50%;
+  h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 300;
+  }
+
+  p {
+    padding: 0 20% 2%;
+  }
+}
+.tech {
+  width: 50%;
   h2 {
     text-align: center;
     font-size: 3.8rem;
@@ -50,7 +65,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   margin-bottom: 30px;
 
   a {
-    font-size: 20px;
+    font-size: 3rem;
     color: $cDark;
     position: relative;
     text-transform: uppercase;
