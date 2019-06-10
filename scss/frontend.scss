@@ -5,7 +5,8 @@
     font-weight: 300;
   }
 }
-.grid-front { 
+
+.grid-front {
   display: grid;
   padding-bottom: 30px;
   grid-gap: 5rem;
@@ -13,15 +14,19 @@
     'front1 front2'
     'front3 front4';
 }
-.front1 { 
+
+.front1 {
   grid-area: front1;
 }
+
 .front2 {
   grid-area: front2;
 }
+
 .front3 {
   grid-area: front3;
 }
+
 .front4 {
   grid-area: front4;
 }

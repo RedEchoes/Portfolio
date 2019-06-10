@@ -5,42 +5,50 @@ header {
   color: $cDark;
   padding: 2%;
 }
+
 .h-content {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.social{
-	display: flex;
-	align-content: center;
-	justify-content: space-between;
+
+.social {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
   width: 150px;
   margin: 0 auto;
 
-} 
+}
+
 .intro {
   h2 {
     text-align: center;
     font-size: 3.8rem;
     font-weight: 300;
   }
-  p{
-    padding: 0 20% 2%; 
+
+  p {
+    padding: 0 20% 2%;
   }
 }
+
 .btn-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
   padding: 0 25%;
   margin: 0 auto;
-}  
+}
+
 $duration: .3s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
 .btn {
   margin-bottom: 30px;
+
   a {
     font-size: 20px;
     color: $cDark;
@@ -48,6 +56,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     text-transform: uppercase;
     text-decoration: none;
     padding-bottom: 8px;
+
     &:before,
     &:after {
       content: '';
@@ -58,38 +67,46 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
       height: 2px;
       background-color: $cDark;
     }
+
     &:before {
       opacity: 0;
       transform: translateY(- $distance);
       transition: transform 0s $easeOutBack, opacity 0s;
     }
+
     &:after {
       opacity: 0;
       transform: translateY($distance/2);
       transition: transform $duration $easeOutBack, opacity $duration;
     }
+
     &:hover,
     &:focus {
+
       &:before,
       &:after {
         opacity: 1;
         transform: translateY(0);
       }
+
       &:before {
         transition: transform $duration $easeOutBack, opacity $duration;
       }
+
       &:after {
         transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
       }
     }
   }
 }
+
 .name {
   h1 {
     margin-bottom: 20px;
     font-size: 4.8rem;
     font-weight: 400;
   }
+
   width: 100%;
   text-align: center;
 }
