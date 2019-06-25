@@ -22,6 +22,50 @@ header {
           justify-content: space-between;
   width: 150px;
   margin: 0 auto; }
+  .social a {
+    color: #333333;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 8px; }
+    .social a:before, .social a:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #333333; }
+    .social a:before {
+      opacity: 0;
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+      transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .social a:after {
+      opacity: 0;
+      -webkit-transform: translateY(4px);
+              transform: translateY(4px);
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .social a:hover:before, .social a:hover:after, .social a:focus:before, .social a:focus:after {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }
+    .social a:hover:before, .social a:focus:before {
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .social a:hover:after, .social a:focus:after {
+      -webkit-transition: opacity 0s 0.3s, -webkit-transform 0s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: opacity 0s 0.3s, -webkit-transform 0s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.3s;
+      transition: transform 0s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.3s, -webkit-transform 0s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
 .about {
   display: -webkit-box;
@@ -56,9 +100,8 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   padding: 0 25% 30px;
   margin: 0 auto; }
@@ -337,7 +380,8 @@ header {
 html {
   background-color: #eeeeee;
   color: #333333;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 img {
   width: 100%; }

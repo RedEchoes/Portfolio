@@ -1,5 +1,9 @@
 @import "colors";
 
+$duration: .3s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
 header {
   padding: 2%;
 }
@@ -16,6 +20,54 @@ header {
   justify-content: space-between;
   width: 150px;
   margin: 0 auto;
+  a {
+    color: $cDark;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 8px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $cDark;
+    }
+
+    &:before {
+      opacity: 0;
+      transform: translateY(- $distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+
+    &:hover,
+    &:focus {
+
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
 
 }
 .about{
@@ -51,15 +103,11 @@ header {
 .btn-header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   padding: 0 25% 30px;
   margin: 0 auto;
 }
-
-$duration: .3s;
-$distance: 8px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 .btn {
   margin-bottom: 30px;
