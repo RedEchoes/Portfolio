@@ -20,7 +20,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 150px;
+  width: 200px;
   margin: 0 auto; }
   .social a {
     color: #333333;
